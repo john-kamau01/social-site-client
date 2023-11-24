@@ -15,7 +15,9 @@ const Home = () => {
 
   const fetchData = async () => {
     try {
-      const res = await axios.get("http://localhost:8081/feed");
+      const res = await axios.get(
+        "https://social-site-server-pearl.vercel.app/feed"
+      );
       setData(res.data.posts);
     } catch (error) {
       console.log(error);
@@ -24,7 +26,9 @@ const Home = () => {
 
   const fetchUsers = async () => {
     try {
-      const res = await axios.get("http://localhost:8081/users");
+      const res = await axios.get(
+        "https://social-site-server-pearl.vercel.app/users"
+      );
       setUsers(res.data.users);
     } catch (error) {
       console.log(error);

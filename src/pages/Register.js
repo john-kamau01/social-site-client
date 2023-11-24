@@ -13,7 +13,7 @@ const Register = () => {
     e.preventDefault();
 
     axios
-      .post("http://localhost:8081/register", {
+      .post("https://social-site-server-pearl.vercel.app/register", {
         username: userName,
         email: email,
         password: password,

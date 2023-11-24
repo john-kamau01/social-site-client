@@ -13,10 +13,13 @@ const Login = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post("http://localhost:8081/login", {
-        email: email,
-        password: password,
-      });
+      const response = await axios.post(
+        "https://social-site-server-pearl.vercel.app/login",
+        {
+          email: email,
+          password: password,
+        }
+      );
 
       if (response.data.error) {
         setErrorMessage(response?.data.message);
